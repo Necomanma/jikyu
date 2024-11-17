@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時給シミュレーター</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #fields { display: flex; justify-content: center; margin-top: 20px; }
+        .field {
+            width: 60px;           /* 幅を少し狭く */
+            height: 360px;         /* 高さを増加 */
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+            margin: 0 5px;
+        }
+        .coin {
+            width: 25px;          /* コインの幅を少し小さく */
+            height: 25px;         /* コインの高さを少し小さく */
+            position: absolute;
+            border-radius: 50%;   /* 丸い形状 */
+            background: rgb(194, 192, 192);
+            text-align: center;
+            line-height: 25px;
+        }
+        .note {
+            width: 60px;          /* 紙幣の幅 */
+            height: 30px;         /* 紙幣の高さ */
+            background: rgb(172, 164, 116);
+            position: absolute;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>時給シミュレーター</h1>
+    <input type="number" id="hourlyRate" placeholder="時給を入力">
+    <button onclick="startSimulation()">開始</button>
+    <button onclick="stopSimulation()">停止</button>
+
+    <div id="fields">
+        <div class="field" id="field5"></div>
+        <div class="field" id="field4"></div>
+        <div class="field" id="field3"></div>
+        <div class="field" id="field2"></div>
+        <div class="field" id="field1"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
